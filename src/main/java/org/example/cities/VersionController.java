@@ -8,6 +8,7 @@ public class VersionController {
 
     @RequestMapping("/version")
     public String index() {
-        return "Greetings New York Roadshow!";
+        String timestamp = System.getProperty("staging.timestamp");
+        return "Application was staged at: " + timestamp;
     }
 }
