@@ -15,18 +15,27 @@ public class StagingController {
 		String green = "#9FF781";
 		
 		// Blue/Green deploy demo
-		// String color = blue;
-		String color = green;
+		String color = blue;
+		// String color = green;
 		
 		StringBuffer s = new StringBuffer();
 		
 		s.append("<body style=\"background:");
 		s.append(color);
 		s.append("\"><h1><center>Hello, World!</center></h1>");
-		s.append("<br><br>Application Environment Variables:<br>");
+		
+		s.append("<table style=\"width:100%\">");
+		s.append("<tr>");
+		s.append("<th colspan=\"2\">Application Environment Variables</th>");
+		s.append("</tr>");
 		for (Map.Entry<String, String> envvar : System.getenv().entrySet()) {
-	        s.append("<br><b>" + envvar.getKey() + ":</b> " + envvar.getValue());
+			s.append("<tr>");
+			s.append("<td>"+envvar.getKey()+"</td>");
+			s.append("<td>"+envvar.getValue()+"</td>");
+			s.append("</tr>");
 	    }
+		s.append("</table>");
+		
 		return s.toString();
 		
 	}
