@@ -22,8 +22,13 @@ public class StagingController {
 		
 		s.append("<body style=\"background:");
 		s.append(color);
-		s.append("\"><h1><center>Hello, World!</center></h1>");
+		s.append("\">");
+		s.append("<center>");
+		s.append("<h1>Hello, World!</center></h1>");
+		s.append(System.getenv().get("VCAP_APP_HOST") + ":" + System.getenv().get("VCAP_APP_PORT") );
+		s.append("</center>");
 		
+		/*
 		s.append("<table border=\"1\" style=\"width:60%\">");
 		s.append("<tr>");
 		s.append("<th colspan=\"2\">Application Environment Variables</th>");
@@ -35,6 +40,7 @@ public class StagingController {
 			s.append("</tr>");
 	    }
 		s.append("</table>");
+		*/
 		
 		return s.toString();
 		
