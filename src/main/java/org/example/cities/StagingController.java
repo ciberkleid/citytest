@@ -24,7 +24,7 @@ public class StagingController {
 		s.append(color);
 		s.append("\"><h1><center>Hello, World!</center></h1>");
 		
-		s.append("<table style=\"width:100%\">");
+		s.append("<table border=\"1\" style=\"width:60%\">");
 		s.append("<tr>");
 		s.append("<th colspan=\"2\">Application Environment Variables</th>");
 		s.append("</tr>");
