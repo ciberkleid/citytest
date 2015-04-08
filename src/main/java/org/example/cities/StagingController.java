@@ -25,7 +25,7 @@ public class StagingController {
 		s.append("\">");
 		s.append("<h1><center>Hello, World!</center></center></h1>");
 		s.append("<center>");
-		s.append("<br>This app is running on IP and Port ");
+		s.append("<br>This app is running on ");
 		s.append(System.getenv().get("VCAP_APP_HOST") + ":" + System.getenv().get("VCAP_APP_PORT") );
 		s.append("</center>");
 		
