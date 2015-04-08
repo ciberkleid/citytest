@@ -15,16 +15,17 @@ public class StagingController {
 		String green = "#9FF781";
 		
 		// Blue/Green deploy demo
-		String color = blue;
-		// String color = green;
+		// String color = blue;
+		String color = green;
 		
 		StringBuffer s = new StringBuffer();
 		
 		s.append("<body style=\"background:");
 		s.append(color);
 		s.append("\">");
+		s.append("<h1><center>Hello, World!</center></center></h1>");
 		s.append("<center>");
-		s.append("<h1>Hello, World!</center></h1>");
+		s.append("<br>This app is running on IP and Port ");
 		s.append(System.getenv().get("VCAP_APP_HOST") + ":" + System.getenv().get("VCAP_APP_PORT") );
 		s.append("</center>");
 		
