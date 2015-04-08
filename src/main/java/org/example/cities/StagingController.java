@@ -29,20 +29,9 @@ public class StagingController {
 		s.append("\">");
 		s.append("<h1><center>Hello, World!</center></center></h1>");
 		s.append("<center>");
-		s.append("<br>This app is running on ");
-		s.append(System.getenv().get("CF_INSTANCE_IP") + ":" + System.getenv().get("VCAP_APP_PORT"));
+		s.append("<br>This app is listening on port ");
+		s.append(System.getenv().get("VCAP_APP_PORT"));
 		s.append("</center>");
-
-		/*
-		 * s.append("<table border=\"1\" style=\"width:60%\">");
-		 * s.append("<tr>");
-		 * s.append("<th colspan=\"2\">Application Environment Variables</th>");
-		 * s.append("</tr>"); for (Map.Entry<String, String> envvar :
-		 * System.getenv().entrySet()) { s.append("<tr>");
-		 * s.append("<td>"+envvar.getKey()+"</td>");
-		 * s.append("<td>"+envvar.getValue()+"</td>"); s.append("</tr>"); }
-		 * s.append("</table>");
-		 */
 
 		return s.toString();
 
