@@ -19,8 +19,8 @@ public class StagingController {
 		String green = "#9FF781";
 
 		// Blue/Green deploy demo
-		String color = blue;
-		// String color = green;
+		// String color = blue;
+		String color = green;
 
 		StringBuffer s = new StringBuffer();
 
